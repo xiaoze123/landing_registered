@@ -1,22 +1,19 @@
-
-
+<div class="title"><h1>注册</h1></div>
+<div class="Login_information">
 <%= form_for :user do |f| %>
-    <h1>注册</h1>
+
     <dl class="form">
-      <dt><%= f.label :姓名 %></dt>
-      <dd><%= f.text_field :name %></dd>
+      <dt class="Writing_style"><%= f.label :姓名 %></dt>
+      <dd class="user_name_box"><%= f.text_field :name %></dd>
     </dl>
     <dl class="form">
-      <dt> <%= f.label :密码 %> </dt>
-      <dd> <%= f.password_field :password %> </dd>
+      <dt class="Writing_style"> <%= f.label :密码 %> </dt>
+      <dd class="user_name_box"> <%= f.password_field :password %> </dd>
     </dl>
     <dl class="form">
-      <dt> <%= f.label :确认密码 %> </dt>
-      <dd> <%= f.password_field :password_digest %> </dd>
-    </dl>
-    <dl class="form">
-      <dt> <%= f.label :角色 %> </dt>
-      <dd><%= f.select :role ,['学生','老师'] %></dd>
+      <dt class="Writing_style"> <%= f.label :确认密码 %> </dt>
+      <dd class="user_name_box"> <%= f.password_field :password_digest %> </dd>
     </dl>
     <p><%= f.submit "注册" %></p>
 <% end %>
+    </div>

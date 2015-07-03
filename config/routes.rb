@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/landing'=>'user#landing'
   post '/registered'=>'user#create'
   post '/create_login_session' => 'user#create_login_session'
+  get '/landing'=>'user#Function_module'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

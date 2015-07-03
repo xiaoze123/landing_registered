@@ -1,0 +1,33 @@
+// Place all the styles related to the user controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.title{
+    text-align: center;
+    font-size: 30px;
+}
+.Login_information{
+  text-align: center;
+}
+.Writing_style{
+  font-size: 20px;
+  margin-right: 16%;
+}
+.user_name_box{
+  margin-left: 50px;
+}
+.user_name_box1{
+  margin-right: 100px;
+}
+.landing_bnt{
+  text-align: center;
+}
+.bnt{
+  text-align: center;
+}
+
+body{
+//  background-image: url("th%20(1).jpg");
+//  background-position:center;
+//  background-repeat:no-repeat;
+  background-color: steelblue;
+}

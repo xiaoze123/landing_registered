@@ -5,6 +5,9 @@
     <dl class="form">
       <dt class="Writing_style"><%= f.label :姓名 %></dt>
       <dd class="user_name_box"><%= f.text_field :name %></dd>
+      <%if session[:warning]%>
+        <%= session[:warning] %>
+      <%end%>
     </dl>
     <dl class="form">
       <dt class="Writing_style"> <%= f.label :密码 %> </dt>

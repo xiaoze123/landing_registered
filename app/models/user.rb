@@ -1,13 +1,12 @@
 
   class User < ActiveRecord::Base
-    validates :name,  presence:true,uniqueness:{message:'already exist!',case_sensitive: false}#case_sensitive区分大小写
+    validates :name, uniqueness:{case_sensitive: false}
+    validates  :name, :password,  presence: true
+
+
+
     def self.authenticate(name, password)
       user = User.find_by_name(name)
-
-      # if user && Base64(password)== user.password
-      #   return user
-      # end
-      # false
     end
 
     has_many :designs
@@ -20,3 +19,4 @@
       end while User.exists?(column => self[column])
     end
   end
+

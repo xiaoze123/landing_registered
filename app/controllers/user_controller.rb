@@ -3,22 +3,22 @@ class UserController < ApplicationController
 
   end
 
-  def user_registered
-    @user =User.new
+  def registered
+    @user = User.new
   end
 
   def create_login_session
     @user= User.authenticate(params[:name], params[:password])
     if @user
-      render :registered
+      render :Function_module
     else
       redirect_to :landing
     end
   end
 
-  def new
-    @contact = Contact.new
-  end
+  # def new
+  #   @user = User.new
+  # end
 
   def landing
     cookies.delete(:token)
@@ -29,7 +29,11 @@ class UserController < ApplicationController
     if @user.save
       redirect_to :root
     else
-      render :registered
+      for message in @user.errors.messages
+        session[:warning] = message[1][0]
+      end
+
+      render 'registered'
     end
   end
 
